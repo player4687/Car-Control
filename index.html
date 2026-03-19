@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Car Control 🎮</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>CONTROL PANEL</h1>
+
+<div class="controls">
+  <button onclick="sendCommand('forward')">▲</button>
+
+  <div class="middle">
+    <button onclick="sendCommand('left')">◀</button>
+    <button onclick="sendCommand('stop')" class="stop">■</button>
+    <button onclick="sendCommand('right')">▶</button>
+  </div>
+
+  <button onclick="sendCommand('back')">▼</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
