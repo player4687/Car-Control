@@ -112,3 +112,6 @@ button:hover {
 .navbar a:hover {
   text-shadow: 0 0 10px #00f7ff;
 }
+.container {
+  margin-top: 80px;
+}
