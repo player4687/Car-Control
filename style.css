@@ -68,3 +68,26 @@ button:hover {
   color: black;
   box-shadow: 0 0 25px red;
 }
+/* 📱 MOBILE OPTIMIZATION */
+@media (max-width: 600px) {
+
+  h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    width: 80px;
+    height: 80px;
+    font-size: 28px;
+  }
+
+  .controls {
+    margin-top: 30px;
+  }
+
+  body {
+    align-items: flex-end; /* pushes controls slightly down */
+    padding-bottom: 80px;
+  }
+}
