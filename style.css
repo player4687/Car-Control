@@ -7,12 +7,41 @@ body {
   justify-content: center;
   align-items: center;
 
-  min-height: 100vh; /* FIXED */
+  min-height: 100vh;
   margin: 0;
+}
+
+/* NAVBAR (MOVED OUTSIDE MEDIA QUERY ✅) */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* spacing FIX 🔥 */
+  padding: 15px;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: #00f7ff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.navbar a:hover {
+  background: #00f7ff;
+  color: black;
+  box-shadow: 0 0 10px #00f7ff;
 }
 
 .container {
   text-align: center;
+  margin-top: 80px; /* prevents overlap with navbar */
 }
 
 /* TITLE */
@@ -27,12 +56,12 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px; /* NEW 🔥 */
+  gap: 10px;
 }
 
 .middle {
   display: flex;
-  gap: 10px; /* NEW 🔥 */
+  gap: 10px;
 }
 
 /* BUTTONS */
@@ -41,13 +70,15 @@ button {
   border: 3px solid #00f7ff;
   color: #00f7ff;
 
-  width: 90px;   /* NEW 🔥 makes perfect square */
+  width: 90px;
   height: 90px;
 
   font-size: 30px;
   border-radius: 15px;
   cursor: pointer;
   transition: 0.2s;
+
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* HOVER */
@@ -55,6 +86,11 @@ button:hover {
   background: #00f7ff;
   color: black;
   box-shadow: 0 0 25px #00f7ff;
+}
+
+/* CLICK EFFECT 🔥 */
+button:active {
+  transform: scale(0.9);
 }
 
 /* STOP BUTTON */
@@ -68,7 +104,22 @@ button:hover {
   color: black;
   box-shadow: 0 0 25px red;
 }
-/* 📱 MOBILE OPTIMIZATION */
+
+/* INPUTS (for feedback page) */
+input, textarea {
+  width: 250px;
+  padding: 10px;
+  background: #111;
+  border: 2px solid #00f7ff;
+  color: white;
+  border-radius: 8px;
+}
+
+textarea {
+  height: 100px;
+}
+
+/* 📱 MOBILE */
 @media (max-width: 600px) {
 
   h1 {
@@ -87,43 +138,12 @@ button:hover {
   }
 
   body {
-    align-items: flex-end; /* pushes controls slightly down */
-    padding-bottom: 80px;
+    align-items: flex-end;
+    padding-bottom: 100px;
   }
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #111;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  padding: 15px;
-  z-index: 1000;
-}
 
-.navbar a {
-  color: #00f7ff;
-  text-decoration: none;
-  font-size: 18px;
-  transition: 0.2s;
-}
-
-.navbar a:hover {
-  text-shadow: 0 0 10px #00f7ff;
-}
-.container {
-  margin-top: 80px;
-}
-input, textarea {
-  width: 250px;
-  padding: 10px;
-  background: #111;
-  border: 2px solid #00f7ff;
-  color: white;
-  border-radius: 8px;
-}
-
-textarea {
-  height: 100px;
+  .navbar {
+    gap: 20px; /* smaller gap for mobile */
+    font-size: 14px;
+  }
 }
