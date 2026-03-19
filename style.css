@@ -1,43 +1,57 @@
 body {
-  background: #800202;
+  background: #0f0f0f;
   color: white;
-  text-align: center;
   font-family: Arial;
+
+  /* CENTER EVERYTHING */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
 }
 
 h1 {
-  margin-top: 20px;
   color: #00f7ff;
-  text-shadow: 0 0 15px #00f7ff;
+  text-shadow: 0 0 20px #00f7ff;
+  margin-bottom: 40px;
 }
 
 .controls {
-  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .middle {
   display: flex;
-  justify-content: center;
 }
 
+/* BIGGER BUTTONS 🔥 */
 button {
   background: #111;
-  border: 2px solid #00f7ff;
+  border: 3px solid #00f7ff;
   color: #00f7ff;
-  padding: 20px;
-  margin: 10px;
-  font-size: 25px;
-  border-radius: 10px;
+  padding: 30px;
+  margin: 15px;
+  font-size: 35px;
+  border-radius: 15px;
   cursor: pointer;
   transition: 0.2s;
 }
 
+/* HOVER EFFECT */
 button:hover {
   background: #00f7ff;
   color: black;
-  box-shadow: 0 0 20px #00f7ff;
+  box-shadow: 0 0 25px #00f7ff;
 }
 
+/* STOP BUTTON */
 .stop {
   border-color: red;
   color: red;
@@ -46,5 +60,5 @@ button:hover {
 .stop:hover {
   background: red;
   color: black;
-  box-shadow: 0 0 20px red;
+  box-shadow: 0 0 25px red;
 }
