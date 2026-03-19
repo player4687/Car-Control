@@ -90,4 +90,25 @@ button:hover {
     align-items: flex-end; /* pushes controls slightly down */
     padding-bottom: 80px;
   }
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 15px;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: #00f7ff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+.navbar a:hover {
+  text-shadow: 0 0 10px #00f7ff;
 }
