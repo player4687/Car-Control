@@ -3,11 +3,11 @@ body {
   color: white;
   font-family: Arial;
 
-  /* CENTER EVERYTHING */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+
+  min-height: 100vh; /* FIXED */
   margin: 0;
 }
 
@@ -15,36 +15,42 @@ body {
   text-align: center;
 }
 
+/* TITLE */
 h1 {
   color: #00f7ff;
   text-shadow: 0 0 20px #00f7ff;
   margin-bottom: 40px;
 }
 
+/* CONTROLS */
 .controls {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 10px; /* NEW 🔥 */
 }
 
 .middle {
   display: flex;
+  gap: 10px; /* NEW 🔥 */
 }
 
-/* BIGGER BUTTONS 🔥 */
+/* BUTTONS */
 button {
   background: #111;
   border: 3px solid #00f7ff;
   color: #00f7ff;
-  padding: 30px;
-  margin: 15px;
-  font-size: 35px;
+
+  width: 90px;   /* NEW 🔥 makes perfect square */
+  height: 90px;
+
+  font-size: 30px;
   border-radius: 15px;
   cursor: pointer;
   transition: 0.2s;
 }
 
-/* HOVER EFFECT */
+/* HOVER */
 button:hover {
   background: #00f7ff;
   color: black;
