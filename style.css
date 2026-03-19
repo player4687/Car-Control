@@ -147,4 +147,18 @@ textarea {
     gap: 20px; /* smaller gap for mobile */
     font-size: 14px;
   }
+/* Highlight for the current page link */
+.navbar a.active {
+  background: #00f7ff;
+  color: black;
+  box-shadow: 0 0 15px #00f7ff;
+}
+
+/* Fix for the Feedback button overflow */
+button[type="submit"] {
+  width: auto; /* Allows the button to grow with text */
+  padding: 0 25px; /* Adds space on the sides */
+  font-size: 20px;
+  height: 60px; /* Shorter than the control arrows */
+}
 }
